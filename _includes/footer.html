@@ -6,10 +6,11 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li>
+		    &copy; 
             {% if site.author %}
-              &copy; {{ site.author | escape }}
+              {{ site.author | escape }}
             {% else %}
-              &copy; {{ site.title | escape }}
+              {{ site.title | escape }}
             {% endif %}
             </li>
             {% if site.email %}
@@ -75,6 +76,8 @@
               {{ site.footer3 | escape }}
             {% endif %}
 		  </li>
+		  <li>&nbsp;</li>
+		  <li><a href="{{ site.url }}/sitemap.xml">Sitemap</a></li>
         </ul>
       </div>
     </div>

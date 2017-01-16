@@ -199,6 +199,7 @@ DEPENDENCIES
   github-pages
   jekyll-feed
   jekyll-paginate
+  jekyll-seo-tag
   wdm (~> 0.1.0)
 
 RUBY VERSION
