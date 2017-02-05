@@ -20,7 +20,8 @@
   <meta name="google-site-verification" content="o0pb7N6z5Aiz1uPqhCXYbxiMRyDkuRgbF98fkFO_7aM" />
   
   <meta property="og:image" content="{{site.url}}/favicon.jpg" />
-  <meta property="og:description" content="Homepage of Divyanshu Grover, Software Developer at Microsoft, IITB Alumni" />
-  
+  <meta property="og:description" content="{% if page.title %}{{ page.title | escape }} of Divyanshu Grover, Software Developer at Microsoft, IITB Alumni{% else %}{{ site.title | escape }}, Software Developer at Microsoft, IITB Alumni{% endif %}" />
+  <meta property="og:url" content="{{site.url}}{{page.permalink}}" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
   
 </head>
