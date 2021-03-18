@@ -20,8 +20,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Homepage of Divyanshu Grover
 footer1: Software Engineer II, Microsoft, Sep 19 - Present
 footer2: Software Engineer, Microsoft, Aug 16 - Aug 19
-footer3: M.Tech., IIT Bombay, Jul 14 - Jun 16
-footer4: B.E, Punjab University, Jul 10 - Jun 14
+footer3: M.Tech. CSE, IIT Bombay, Jul 14 - Jun 16
+footer4: B.E. CSE, Punjab University, Jul 10 - Jun 14
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://divyanshugrover.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics: UA-90399390-1
