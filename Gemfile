@@ -20,5 +20,6 @@ ruby RUBY_VERSION
 gem "github-pages", group: :jekyll_plugins
 gem 'jekyll-paginate', group: :jekyll_plugins
 gem "jekyll-feed", group: :jekyll_plugins
-gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+gem 'wdm' if Gem.win_platform?
 gem 'jekyll-seo-tag'
+gem "webrick"
