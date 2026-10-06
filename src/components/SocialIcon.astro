@@ -1,0 +1,33 @@
+---
+import { siGithub, siX, siInstagram, siFacebook, siYoutube } from "simple-icons";
+
+interface Props {
+  name: string;
+  class?: string;
+}
+
+const { name, class: className } = Astro.props;
+
+const paths: Record<string, string> = {
+  github: siGithub.path,
+  x: siX.path,
+  instagram: siInstagram.path,
+  facebook: siFacebook.path,
+  youtube: siYoutube.path,
+  // simple-icons no longer ships LinkedIn, so this is a plain "in" glyph.
+  linkedin:
+    "M6.5 3h11A3.5 3.5 0 0 1 21 6.5v11a3.5 3.5 0 0 1-3.5 3.5h-11A3.5 3.5 0 0 1 3 17.5v-11A3.5 3.5 0 0 1 6.5 3Zm.2 6.9v8h2.5v-8H6.7ZM8 6.2a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9Zm3.2 3.7v8h2.5v-4.2c0-1.1.5-1.8 1.4-1.8.9 0 1.3.6 1.3 1.7v4.3h2.5v-4.9c0-2.2-1.2-3.3-2.9-3.3-1.1 0-1.9.5-2.4 1.2V9.9h-2.4Z",
+};
+---
+
+<svg
+  class={className}
+  viewBox="0 0 24 24"
+  width="18"
+  height="18"
+  fill="currentColor"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d={paths[name]} fill-rule="evenodd"></path>
+</svg>
