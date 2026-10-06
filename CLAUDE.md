@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## What this repo is
-Divyanshu Grover's personal website at https://divyanshugrover.github.io (repo divyanshugrover/divyanshugrover.github.io, on the owner's personal GitHub account). Astro + Tailwind 4 static site on GitHub Pages, deployed by `.github/workflows/deploy.yml` on push to `main` (Pages source must be "GitHub Actions"). It replaced an old Jekyll site; there is no Ruby here any more.
+Divyanshu Grover's personal website at https://divyanshugrover.github.io (repo divyanshugrover/divyanshugrover.github.io, on the owner's personal GitHub account). Astro + Tailwind 4 static site on GitHub Pages, deployed by `.github/workflows/deploy.yml` on push to `master` (this repo's default branch) (Pages source must be "GitHub Actions"). It replaced an old Jekyll site; there is no Ruby here any more.
 
 Commands: `npm run dev`, `npm run build`, `npm run check` (build and check must be clean before saying a change is done), `npm audit` (keep at 0).
 
@@ -26,6 +26,6 @@ This repo is public. This site must not mention, link to or borrow from any of t
 - To update the resume: replace `public/assets/resume.pdf` and change `resumeUpdated` in `src/config.ts`.
 
 ## Rules for any change
-- Never commit, push, open or merge a PR without the owner saying go. Work on a branch, show the dev server first, merge through a PR, never push to main directly.
+- Never commit, push, open or merge a PR without the owner saying go. Work on a branch, show the dev server first, merge through a PR, never push to master directly.
 - SEO for every page: one h1, title <= 60 characters, description <= 160, canonical, OG image, alt text on images, JSON-LD that matches visible content.
 - Mobile-first: check at phone width and in both light and dark mode, including text contrast on buttons and links.

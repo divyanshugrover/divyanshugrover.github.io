@@ -1,6 +1,6 @@
 # divyanshugrover.github.io
 
-Personal website: Astro + Tailwind, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
+Personal website: Astro + Tailwind, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `master`.
 
 - `npm install`, then `npm run dev` to serve locally.
 - `npm run build` and `npm run check` must both be clean.
