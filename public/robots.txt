@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://divyanshugrover.github.io/sitemap-index.xml

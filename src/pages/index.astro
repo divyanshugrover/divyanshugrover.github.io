@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE, SOCIAL, EXPERIENCE } from "../config";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${SITE.url}/#person`,
+    name: SITE.name,
+    url: SITE.url,
+    email: SITE.email,
+    jobTitle: "Senior Software Engineer",
+    worksFor: { "@type": "Organization", name: "Microsoft" },
+    alumniOf: [
+      { "@type": "CollegeOrUniversity", name: "Indian Institute of Technology Bombay" },
+      { "@type": "CollegeOrUniversity", name: "Panjab University" },
+    ],
+    sameAs: SOCIAL.map((s) => s.url),
+  },
+};
+---
+
+<BaseLayout path="/" schema={schema}>
+  <section class="py-6 sm:py-10 lg:py-16 flex flex-col-reverse gap-8 sm:flex-row sm:items-center sm:justify-between lg:gap-16">
+    <div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">Hi, I'm Divyanshu.</h1>
+      <p class="mt-5 text-lg lg:text-xl text-muted max-w-xl">
+        I'm a computer science graduate and software engineer, currently working at
+        Microsoft India.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a
+          href="/assets/resume.pdf"
+          class="rounded-lg bg-ink px-5 py-2.5 text-sm font-medium text-paper no-underline hover:no-underline hover:opacity-90"
+        >
+          Download resume
+        </a>
+        <a
+          href={`mailto:${SITE.email}`}
+          class="rounded-lg border border-line px-5 py-2.5 text-sm font-medium text-ink no-underline hover:no-underline hover:bg-card"
+        >
+          Email me
+        </a>
+      </div>
+    </div>
+    <img
+      src="/assets/me.jpg"
+      alt="Divyanshu Grover"
+      width="750"
+      height="1050"
+      class="h-44 w-44 sm:h-52 sm:w-52 lg:h-72 lg:w-72 shrink-0 rounded-full border border-line object-cover object-[50%_18%]"
+    />
+  </section>
+
+  <div class="mt-8 grid gap-10 lg:grid-cols-3 lg:gap-12">
+    <section class="lg:col-span-2" aria-labelledby="resume">
+      <div class="flex items-baseline justify-between gap-4">
+        <h2 id="resume" class="text-xl font-semibold tracking-tight">Resume</h2>
+        <p class="text-sm text-muted">Last updated {SITE.resumeUpdated}</p>
+      </div>
+      <object
+        data="/assets/resume.pdf"
+        type="application/pdf"
+        class="mt-4 h-[70vh] min-h-[480px] w-full rounded-lg border border-line bg-card lg:h-[85vh]"
+      >
+        <p class="p-6 text-sm text-muted">
+          Your browser can't show the PDF inline. <a href="/assets/resume.pdf">Open the resume</a> instead.
+        </p>
+      </object>
+    </section>
+
+    <aside class="order-first space-y-8 lg:order-none lg:pt-9">
+      <section aria-labelledby="background">
+        <h2 id="background" class="text-xl font-semibold tracking-tight">Background</h2>
+        <ul class="mt-4 space-y-4 text-sm">
+          {EXPERIENCE.map((e) => (
+            <li>
+              <p class="font-medium">{e.what}</p>
+              <p class="text-muted">{e.when}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section aria-labelledby="elsewhere">
+        <h2 id="elsewhere" class="text-xl font-semibold tracking-tight">Elsewhere</h2>
+        <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm lg:grid-cols-1">
+          {SOCIAL.map((s) => (
+            <li><a href={s.url} rel="me noopener">{s.name}</a></li>
+          ))}
+        </ul>
+      </section>
+    </aside>
+  </div>
+</BaseLayout>

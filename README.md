@@ -1,10 +1,8 @@
-# Website hosted on GitHub pages
+# divyanshugrover.github.io
 
-## Common Tasks
+Personal website: Astro + Tailwind, deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
 
-* Install ruby, jekyll, and bundler via the [steps in Jekyll docs](https://jekyllrb.com/docs/installation/).
-* Delete the `Gemfile.lock` and use `bundle install` to update the dependencies.
-* Use `bundle exec jekyll serve` to serve the website locally.
-* Variables are located in `_config.yml`.
-* Assets are located in `./assets`.
-* Git commit to update the website.
+- `npm install`, then `npm run dev` to serve locally.
+- `npm run build` and `npm run check` must both be clean.
+- Name, email, links and the experience list are in `src/config.ts`.
+- Resume: replace `public/assets/resume.pdf` and update `resumeUpdated` in `src/config.ts`.
