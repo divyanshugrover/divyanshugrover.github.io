@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config";
+---
+
+<BaseLayout title="Page not found | Divyanshu Grover" path="/404/" noindex>
+  <section class="py-16 text-center">
+    <h1 class="text-6xl font-semibold tracking-tight">404</h1>
+    <p class="mt-4 text-lg text-muted">This page doesn't exist.</p>
+    <p class="mt-2 text-muted">
+      If you followed a link from my site, please
+      <a href={`mailto:${SITE.email}`}>email me</a> and let me know it's broken.
+    </p>
+    <p class="mt-8"><a href="/">Back to the homepage</a></p>
+  </section>
+</BaseLayout>
